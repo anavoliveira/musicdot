@@ -1,0 +1,67 @@
+.cabecalho{
+    position:absolute;
+    top:0;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    color: #FFF;                 /* Cor da fonte: branca */
+    text-align:center;             /* alinha o texto no centro*/
+    font-size: 0.6rem;             /* tamanho da fonte com base no tamanho da fonte do elem pai*/
+    font-weight:bold;              /*  fonte em negrito*/
+    text-transform: uppercase;     /* Maiusculas*/  
+    letter-spacing: 0.23em;        /* espaço entre as letras*/
+}
+
+.cabecalho__logo{
+    margin: 1.5em 6em;               /*espaçamento externo*/
+    width: 14.5em;                  /* tamanho do logo do cabeçalho*/
+}
+
+.cabecalho__menu{
+    background-color: #272b3a87;          /* cor do menu*/
+    display:flex;                           /* display flexivel*/
+    justify-content:space-evenly;           /* distribui os espaços igualmente*/
+    flex-wrap:wrap;                         /* quebra de linha pra baixo*/
+}
+
+.cabecalho__item-menu{
+    display:inline-block;                   /* tem propriedades inline e block, ocupa o*/
+}                                           /*do conteudo, mas o tamanho pode cariar*/
+
+.cabecalho__item-menu a{
+    display:flex;                       /* serve para os links*/    
+    padding: 1.86em 1.42em;             /* espaço externo dos links*/
+}   
+@media (min-width: 640px){
+    .cabecalho{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cabecalho__logo{
+        padding: 2.5em 0;
+    }
+
+    .cabecalho__menu{
+        background-color:transparent;
+    }
+}
+
+@media (min-width:770px){
+    .cabecalho__item-menu--matricular{
+        margin-left: 1.42em;
+        border-radius:  6px;
+        background-color: #e93d50;
+    }
+}
+
+@media(max-width: 770px){
+    .cabecalho{
+       padding: 1em;
+    }
+}
+
